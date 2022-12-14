@@ -18,11 +18,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 library(irtoys) # irt functions
 library(tidyverse) # data manipulation functions
-<<<<<<< HEAD
-# source("C:/Prov/Research/helper_functions/helper_functions.R") # print funcs
-=======
-source("C:/Prov/Research/helper_functions/helper_functions.R") # print funcs
->>>>>>> df18729e19dfd9e25bee1cc7204179942feba22c
+# source("C:/Prov/Research/helper_functions/helper_functions.R") # print funcs- not used to simplify
 ```
 
 This is the irt scoring procedures, using EAP then MLE, when response vector has more than one unique response.
@@ -301,13 +297,8 @@ is_response_correct_func <- function(
   # rbinom chooses 0 or 1 for given probability
   rbinom(n = 1, size = 1, prob = 
            # logistic function solved for P
-<<<<<<< HEAD
   exp((current_candidate_latent_ability - item_difficulty)) / 
     (1 + exp((current_candidate_latent_ability - item_difficulty)))
-=======
-  exp(1.7*(current_candidate_latent_ability - item_difficulty)) / 
-    (1 + exp(1.7*(current_candidate_latent_ability - item_difficulty)))
->>>>>>> df18729e19dfd9e25bee1cc7204179942feba22c
   )
 }
 
@@ -378,13 +369,8 @@ simulation_output %>%
     sem_mean = mean(sem),
     sem_sd = sd(sem)
   ) %>% 
-<<<<<<< HEAD
   mutate(across(where(is.numeric), round, 2)) # %>% 
   # table_print(., caption = "Simulation Summary Output by Theta")
-=======
-  mutate(across(where(is.numeric), round, 2)) %>% 
-  table_print(., caption = "Simulation Summary Output by Theta")
->>>>>>> df18729e19dfd9e25bee1cc7204179942feba22c
 ```
 
 ## Simulation Plot
